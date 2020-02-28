@@ -15,25 +15,25 @@ UIView category that adds a shake animation like the password field of the OSX l
   </a>
 </p>
 
-##Screenshot
+## Screenshot
 ![UIView+Shake](https://raw.githubusercontent.com/andreamazz/UIView-Shake/master/assets/screenshot.gif)
 
-##Setup with CocoaPods
+## Setup with CocoaPods
 * Add ```pod 'UIView+Shake'``` to your Podfile
 * Run ```pod install```
 * Run ```open App.xcworkspace```
 
-###Objective-C
+### Objective-C
 Import ```UIView+Shake.h``` in your controller's header file
-###Swift
+### Swift
 If you are using `use_frameworks!` in your Podfile, use this import:
 ```swift
 import UIView_Shake
 ```
 
-##Usage
+## Usage
 
-###In Objective-C
+### In Objective-C
 
 ```objc
 // Shake
@@ -58,23 +58,23 @@ import UIView_Shake
 ];
 ```
 
-###In Swift
+### In Swift
 
 ```swift
 // Shake
 self.view.shake()
-        
+
 // Shake with the default speed
 self.view.shake(10,              // 10 times
                 withDelta: 5.0   // 5 points wide
 )
-        
+
 // Shake with a custom speed
 self.view.shake(10,              // 10 times
                 withDelta: 5.0,  // 5 points wide
                 speed: 0.03      // 30ms per shake
 )
-        
+
 // Shake with a custom speed and direction
 self.view.shake(10,              // 10 times
                 withDelta: 5.0,  // 5 points wide
@@ -83,7 +83,10 @@ self.view.shake(10,              // 10 times
 )
 ```
 
-##Completion Handler
+## Direction
+The shake direction is either `.Vertical`, `.Horizontal` or `.Rotation`
+
+## Completion Handler
 You can also pass a completion block that will be performed as soon as the shake animation stops
 ```objc
 - (void)shake:(int)times withDelta:(CGFloat)delta completion:(void((^)()))handler;
@@ -97,16 +100,16 @@ view.shake(10, withDelta: 5) {
 }
 ```
 
-#Author
-[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me. 
+# Author
+[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me.
 
-Want to support the development of [these free libraries](https://cocoapods.org/owners/734)? Buy me a coffee ☕️ via [Paypal](https://www.paypal.me/andreamazzini).  
+Want to support the development of [these free libraries](https://cocoapods.org/owners/734)? Buy me a coffee ☕️ via [Paypal](https://www.paypal.me/andreamazzini).
 
-#Contributors
-Thanks to [everyone](https://github.com/andreamazz/UIView-Shake/graphs/contributors) kind enough to submit a pull request. 
+# Contributors
+Thanks to [everyone](https://github.com/andreamazz/UIView-Shake/graphs/contributors) kind enough to submit a pull request.
 
 
-#MIT License
+# MIT License
 	Copyright (c) 2015 Andrea Mazzini. All rights reserved.
 
 	Permission is hereby granted, free of charge, to any person obtaining a
